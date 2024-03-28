@@ -9,14 +9,23 @@ const Navbar = () => {
           <Link to="/">
             <h1 className="navbar-logo text-[2.5rem] ">Shine</h1>
           </Link>
-          <div className="link-wrapper font-Poppoins">
-            <Link className="px-4 " to="shop">
+          <div className="link-wrapper w-[20rem]  font-Poppoins">
+            <Link
+              className="px-4 after:bg-[#fb8500] after:h-[3px] after:w-[0px] after:absolute relative after:bottom-[-10px] after:left-0 after:transition-[.3s] hover:after:w-full"
+              to="shop"
+            >
               SHOP
             </Link>
-            <Link className="px-4" to="services">
+            <Link
+              className="px-4 after:bg-[#fb8500] after:h-[3px] after:w-[0px] after:absolute relative after:bottom-[-10px] after:left-0 after:transition-[.3s] hover:after:w-full"
+              to="services"
+            >
               SERVICES
             </Link>
-            <Link className="px-4" to="about">
+            <Link
+              className="px-4 after:bg-[#fb8500] after:h-[3px] after:w-[0px] after:absolute relative after:bottom-[-10px] after:left-0 after:transition-[.3s] hover:after:w-full"
+              to="about"
+            >
               ABOUT
             </Link>
           </div>
@@ -30,3 +39,5 @@ const Navbar = () => {
 };
 
 export default Navbar;
+
+// after:bg-[#fb8500] after:h-[3px] after:w-[0px] after:absolute relative after:bottom-[-10px] after:left-0 after:transition-[.3s] hover:after:w-full
