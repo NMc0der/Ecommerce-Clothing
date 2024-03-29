@@ -4,7 +4,10 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        Poppoins: ["Poppins"],
+        Poppoins: ["Poppins", "sans-serrif"],
+        Butterfly: ["Butterfly kids"],
+        Lobster: ["Lobster", "cursive"],
+        Courgette: ["Courgette", "cursive"],
       },
     },
   },

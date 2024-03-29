@@ -3,11 +3,11 @@ import { FaShoppingCart } from "react-icons/fa";
 
 const Navbar = () => {
   return (
-    <nav className="navbar border">
-      <div className="wrapper border flex justify-between items-center  gap-6 mx-[10%] p-4">
+    <nav className="navbar border fixed  w-full">
+      <div className="wrapper border flex justify-between items-center  gap-6 mx-[10%] p-2">
         <div className=" flex  justify-between items-center gap-[10%] ">
           <Link to="/">
-            <h1 className="navbar-logo text-[2.5rem] ">Shine</h1>
+            <h1 className="navbar-logo text-[2rem] font-Lobster ">Shine</h1>
           </Link>
           <div className="link-wrapper w-[20rem]  font-Poppoins">
             <Link
