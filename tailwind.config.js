@@ -9,6 +9,9 @@ export default {
         Lobster: ["Lobster", "cursive"],
         Courgette: ["Courgette", "cursive"],
       },
+      screens: {
+        tablet: "445px",
+      },
     },
   },
   plugins: [],
