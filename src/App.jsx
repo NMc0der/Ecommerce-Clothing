@@ -6,11 +6,11 @@ import Home from "./pages/Home";
 import Shop from "./pages/Shop";
 import Services from "./pages/Services";
 import About from "./pages/About";
+import Footer from "./components/Footer";
 
 function App() {
   return (
     <>
-      <h1></h1>
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
@@ -18,6 +18,7 @@ function App() {
         <Route path="services" element={<Services />} />
         <Route path="about" element={<About />} />
       </Routes>
+      <Footer />
     </>
   );
 }
