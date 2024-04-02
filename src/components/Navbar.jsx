@@ -9,7 +9,7 @@ const Navbar = () => {
           <Link to="/">
             <h1 className="navbar-logo text-[2rem] font-Lobster ">Shine</h1>
           </Link>
-          <div className="link-wrapper w-[20rem]  font-Poppoins">
+          <div className="link-wrapper w-[20rem]  font-Poppins">
             <Link
               className="px-4 after:bg-[#fb8500] after:h-[3px] after:w-[0px] after:absolute relative after:bottom-[-10px] after:left-0 after:transition-[.3s] hover:after:w-full"
               to="shop"
