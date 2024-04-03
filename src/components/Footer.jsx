@@ -13,8 +13,9 @@ const Footer = () => {
     <div>
       <EmailSignUp />
       <div
-        className="h-[200px] flex items-center justify-center [&>a]:text-[40px] [&>a]:m-6 
-      [&>a]:cursor-pointer hover:[&>a]:text-[#FB9AD1]"
+        className="h-[200px] flex items-center justify-center [&>a]:text-[30px]  sm:[&>a]:text-[40px]  
+        sm:[&>a]:m-6 [&>a]:m-1 tablet:[&>a]:m-3
+      [&>a]:cursor-pointer hover:[&>a]:text-[#FB9AD1]  mx-20 "
       >
         <Link to={"https://www.facebook.com/"}>
           <FaFacebookF />
@@ -32,6 +33,9 @@ const Footer = () => {
           <FaYoutube />
         </Link>
       </div>
+      <p className="text-center border-t-black border-t-[1px] mx-[10%] text-xs sm:text-sm">
+        © 2024 Shine, LLC. All Rights Reserved.
+      </p>
     </div>
   );
 };
