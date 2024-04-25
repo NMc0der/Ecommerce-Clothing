@@ -8,14 +8,19 @@ const ShopProduct = ({ name, price, image, image2 }) => {
   };
 
   return (
-    <div className="h-[500px] w-[300px] border flex flex-col items-center font-Garamond font-semibold">
-      <img
-        className="h-auto w-auto "
-        onMouseOver={mouseOver}
-        onMouseOut={mouseOut}
-        src={image}
-        alt=""
-      />
+    <div
+      className="h-[400px] max-w-[300px] border flex flex-col items-center font-Garamond font-semibold m-2 
+    "
+    >
+      <div className="img-container origin-[0_0] duration-[.25s] ">
+        <img
+          className="h-[350px] w-auto duration-700  hover:scale-[1.02] cursor-pointer"
+          onMouseOver={mouseOver}
+          onMouseOut={mouseOut}
+          src={image}
+          alt=""
+        />
+      </div>
       {/* <div
         className={`img h-[400px] w-full bg-cover bg-center bg-no-repeat bg-[image:var(${image})] `}
       ></div> */}

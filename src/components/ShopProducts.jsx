@@ -3,7 +3,7 @@ import { ProductList } from "../data/ProductList";
 
 const ShopProducts = () => {
   return (
-    <div>
+    <div className="grid grid-cols-4 justify-items-center container m-auto">
       {ProductList.map((item, key) => {
         return <ShopProduct {...item} key={key} />;
       })}
