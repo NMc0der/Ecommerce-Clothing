@@ -2,11 +2,21 @@ import ShopProduct from "./ShopProduct";
 import { ProductList } from "../data/ProductList";
 import { IoMdArrowDropdown } from "react-icons/io";
 import React, { useState } from "react";
+import { useLocation } from "react-router-dom";
 
 const ShopProducts = () => {
   const [menuOpen, setMenuOpen] = useState("block");
 
-  const [category, setCategory] = useState(ProductList);
+  const location = useLocation();
+
+  const from = location.state;
+  console.log(from);
+
+  // const prodList = {location.state ? location.state : productList}
+
+  const [category, setCategory] = useState(
+    location.state ? location.state : ProductList
+  );
 
   const CategoryChange = (e) => {
     console.log(ProductList);
