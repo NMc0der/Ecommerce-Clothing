@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { ProductList } from "../data/ProductList";
-
+import HomeCategoryLink from "./HomeCategoryLink";
 const HomeCategory = () => {
   const filteredLink = (category) => {
     // return console.log(category);
@@ -8,9 +8,15 @@ const HomeCategory = () => {
   };
 
   return (
-    <Link to="/shop" state={filteredLink("dress")}>
-      Hello
-    </Link>
+    <>
+      <Link to="/shop" state={filteredLink("dress")}>
+        <HomeCategoryLink list={filteredLink("dress")} />
+      </Link>
+
+      <Link to="/shop" state={filteredLink("shorts")}>
+        whats up
+      </Link>
+    </>
   );
 };
 

@@ -5,12 +5,12 @@ import React, { useState } from "react";
 import { useLocation } from "react-router-dom";
 
 const ShopProducts = () => {
-  const [menuOpen, setMenuOpen] = useState("block");
+  const [menuOpen, setMenuOpen] = useState(false);
 
   const location = useLocation();
 
-  const from = location.state;
-  console.log(from);
+  // const from = location.state;
+  // console.log(from);
 
   // const prodList = {location.state ? location.state : productList}
 
@@ -28,32 +28,35 @@ const ShopProducts = () => {
       );
       setCategory(filteredList);
     }
-    return setMenuOpen("hidden");
+    return setMenuOpen(false);
   };
 
   return (
     <>
       <div
-        onMouseEnter={() => setMenuOpen("block")}
-        className={`dropdown container mx-auto [&>ul]:hover:${menuOpen}`}
+        onMouseEnter={() => setMenuOpen(true)}
+        onMouseLeave={() => setMenuOpen(false)}
+        className={`dropdown container mx-auto `}
       >
         <button className="">
           Category{<IoMdArrowDropdown className="inline" />}
         </button>
-        <ul className={`border absolute z-20 w-[10rem] bg-white hidden `}>
-          <li id="all" onClick={CategoryChange}>
-            All
-          </li>
-          <li id="dress" onClick={CategoryChange}>
-            Dresses
-          </li>
-          <li id="jeans" onClick={CategoryChange}>
-            Jeans
-          </li>
-          <li id="shorts" onClick={CategoryChange}>
-            Shorts
-          </li>
-        </ul>
+        {menuOpen && (
+          <ul className={`border absolute z-20 w-[10rem] bg-white  `}>
+            <li id="all" onClick={CategoryChange}>
+              All
+            </li>
+            <li id="dress" onClick={CategoryChange}>
+              Dresses
+            </li>
+            <li id="jeans" onClick={CategoryChange}>
+              Jeans
+            </li>
+            <li id="shorts" onClick={CategoryChange}>
+              Shorts
+            </li>
+          </ul>
+        )}
       </div>
       <div className="grid grid-cols-4 justify-items-center container m-auto">
         {category.map((item, key) => {
@@ -79,4 +82,8 @@ export default ShopProducts;
 
 // ${
 //   menuOpen ? "hidden" : "block"
+// }
+
+// [&>ul]:hover:${
+//   menuOpen ? "block" : "hidden"
 // }
