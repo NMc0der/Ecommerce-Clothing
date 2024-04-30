@@ -33,12 +33,12 @@ const ShopProducts = () => {
 
   return (
     <>
-      <div
-        onMouseEnter={() => setMenuOpen(true)}
-        onMouseLeave={() => setMenuOpen(false)}
-        className={`dropdown container mx-auto `}
-      >
-        <button className="">
+      <div className={`dropdown container mx-auto`}>
+        <button
+          onMouseEnter={() => setMenuOpen(true)}
+          onMouseLeave={() => setMenuOpen(false)}
+          className=""
+        >
           Category{<IoMdArrowDropdown className="inline" />}
         </button>
         {menuOpen && (

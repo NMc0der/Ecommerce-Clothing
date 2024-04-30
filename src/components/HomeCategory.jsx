@@ -8,15 +8,24 @@ const HomeCategory = () => {
   };
 
   return (
-    <>
-      <Link to="/shop" state={filteredLink("dress")}>
-        <HomeCategoryLink list={filteredLink("dress")} />
-      </Link>
+    <div className="m-5">
+      <h2 className="text-center text-3xl tracking-widest">
+        SHOP BY <span className="font-bold">CATEGORY</span>
+      </h2>
+      <div className="grid grid-cols-4 gap-4 m-8">
+        <Link to="/shop" state={filteredLink("dress")}>
+          <HomeCategoryLink type={"Dresses"} list={filteredLink("dress")} />
+        </Link>
 
-      <Link to="/shop" state={filteredLink("shorts")}>
-        whats up
-      </Link>
-    </>
+        <Link to="/shop" state={filteredLink("shorts")}>
+          <HomeCategoryLink type={"shorts"} list={filteredLink("shorts")} />
+        </Link>
+
+        <Link to="/shop" state={filteredLink("jeans")}>
+          <HomeCategoryLink type={"jeans"} list={filteredLink("jeans")} />
+        </Link>
+      </div>
+    </div>
   );
 };
 
