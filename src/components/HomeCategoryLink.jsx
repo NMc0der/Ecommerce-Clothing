@@ -4,7 +4,7 @@ const HomeCategoryLink = ({ list, type }) => {
   return (
     <div
       className=" border border-[2px]  tracking-widest
-    h-[400px] max-w-[300px] text-center font-[Garmond]  bg-white flex justify-center  "
+    h-[410px] max-w-[300px] text-center font-[Garmond]  bg-white flex justify-center  "
     >
       {console.log(list)}
       <div className="hover:scale-[1.02] duration-300  bg-white h-full w-full hover:border-[2px] hover:border-black">
