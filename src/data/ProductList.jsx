@@ -6,6 +6,10 @@ import SwingDressBlk from "../assets/cn55140252.avif";
 import SwingDressBlk2 from "../assets/cn55139995.avif";
 import HighWaistShorts from "../assets/cn54989161.avif";
 import HighWaistShorts2 from "../assets/cn54989546.avif";
+import ClassicCardigan from "../assets/cn54572472.avif";
+import ClassicCardigan2 from "../assets/cn54572591.avif";
+import GreenTank from "../assets/cn55296404.avif";
+import GreenTank2 from "../assets/cn55296430.avif";
 
 export const ProductList = [
   {
@@ -35,5 +39,21 @@ export const ProductList = [
     image2: HighWaistShorts2,
     price: "$18.00",
     type: "shorts",
+  },
+
+  {
+    name: "Classic Cardigan",
+    image: ClassicCardigan,
+    image2: ClassicCardigan2,
+    price: "$40.00",
+    type: "sweaters&cardigans",
+  },
+
+  {
+    name: "High-Neck Tank",
+    image: GreenTank,
+    image2: GreenTank2,
+    price: "$12.00",
+    type: "shirts&blouses",
   },
 ];
