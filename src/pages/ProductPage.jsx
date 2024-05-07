@@ -1,4 +1,5 @@
 import { useLocation } from "react-router-dom";
+import ShopPrdouctSize from "../components/ShopProductSize";
 
 const ProductPage = () => {
   const location = useLocation().state;
@@ -65,6 +66,7 @@ const ProductPage = () => {
               </div>
             </label>
           </div>
+          <ShopPrdouctSize size="xl" />
         </fieldset>
         <button className="border">ADD TO CART</button>
         <div className="product-details">
