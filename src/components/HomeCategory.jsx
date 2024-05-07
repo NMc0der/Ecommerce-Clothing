@@ -46,6 +46,9 @@ const HomeCategory = () => {
           />
         </Link>
       </div>
+      <div className="paragraph-section">
+        <p></p>
+      </div>
     </div>
   );
 };

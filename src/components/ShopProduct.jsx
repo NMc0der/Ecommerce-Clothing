@@ -1,4 +1,7 @@
-const ShopProduct = ({ name, price, image, image2 }) => {
+import ProductPage from "../pages/ProductPage";
+import { Link } from "react-router-dom";
+const ShopProduct = (props) => {
+  const { name, price, image, image2 } = props;
   const mouseOver = (e) => {
     console.log(e.target.src);
     return (e.target.src = image2);
@@ -8,8 +11,10 @@ const ShopProduct = ({ name, price, image, image2 }) => {
   };
 
   return (
-    <div
-      className="h-[400px] max-w-[300px] border flex flex-col items-center font-Garamond font-semibold m-2 
+    <Link
+      to={"/product"}
+      state={props}
+      className="hover:cursor-pointer h-[400px] max-w-[300px] border flex flex-col items-center font-Garamond font-semibold m-2 
     "
     >
       <div className="img-container origin-[0_0] duration-[.25s] ">
@@ -26,7 +31,7 @@ const ShopProduct = ({ name, price, image, image2 }) => {
       ></div> */}
       <h3>{name}</h3>
       <p>{price}</p>
-    </div>
+    </Link>
   );
 };
 

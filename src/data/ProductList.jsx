@@ -18,6 +18,7 @@ export const ProductList = [
     image2: WhiteFlareDress2,
     price: "$50.00",
     type: "dress",
+    details: ["white", "dress", "long"],
   },
   {
     name: "Light Wash Jeans",
@@ -55,5 +56,6 @@ export const ProductList = [
     image2: GreenTank2,
     price: "$12.00",
     type: "shirts&blouses",
+    details: ["high crew neck", "sleeveless", "crochet trim"],
   },
 ];
