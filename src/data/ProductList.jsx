@@ -8,8 +8,10 @@ import HighWaistShorts from "../assets/cn54989161.avif";
 import HighWaistShorts2 from "../assets/cn54989546.avif";
 import ClassicCardigan from "../assets/cn54572472.avif";
 import ClassicCardigan2 from "../assets/cn54572591.avif";
-import GreenTank from "../assets/cn55296404.avif";
-import GreenTank2 from "../assets/cn55296430.avif";
+import GreenTank from "../assets/HighNeckTankImg/cn55296404.avif";
+import GreenTank2 from "../assets/HighNeckTankImg/cn55296430.avif";
+import GreenTank3 from "../assets/HighNeckTankImg/cn55296438.avif";
+import GreenTank4 from "../assets/HighNeckTankImg/cn55106957.avif";
 
 export const ProductList = [
   {
@@ -56,6 +58,13 @@ export const ProductList = [
     image2: GreenTank2,
     price: "$12.00",
     type: "shirts&blouses",
-    details: ["high crew neck", "sleeveless", "crochet trim"],
+    details: [
+      "High crew neck",
+      "Sleeveless",
+      "Crochet trim",
+      "95% cotton",
+      "5% spandex",
+    ],
+    gallery: [GreenTank3, GreenTank4],
   },
 ];
