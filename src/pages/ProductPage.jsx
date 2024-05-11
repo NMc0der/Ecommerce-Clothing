@@ -5,8 +5,8 @@ const ProductPage = () => {
   const location = useLocation().state;
   console.log(location.state);
   return (
-    <div className="min-h-[500px] flex flex-col container m-auto w-full md:flex-row justify-center">
-      <div className="img-section pt-[8rem] pb-[2rem] md:pb-[8rem] grid md:grid-cols-1 lg:grid-cols-2  gap-5 m-2">
+    <div className="min-h-[500px] flex flex-col container m-auto w-full md:flex-row justify-center align-center">
+      <div className="lg:max-h-[0px] 2xl:max-h-fit img-section pt-[8rem] pb-[2rem] md:pb-[8rem]  grid justify-center  md:grid-cols-1 lg:grid-cols-2  gap-5 m-2">
         {/* flex flex-col 2xl:flex-row  */}
         <img src={location.image} alt="" />
         <img src={location.image2} alt="" />
@@ -21,7 +21,12 @@ const ProductPage = () => {
         <p className="mt-4 lg:mt-8 mb-2 lg:mb-4 text-lg lg:text-xl font-semibold">
           SIZE:
         </p>
-        <fieldset className="mb-8 grid grid-cols-2 mobile:grid-cols-3 tablet:grid-cols-4  justify-items-center gap-3 w-full">
+        <fieldset
+          className="mb-8 grid grid-cols-2 mobile:grid-cols-3 tablet:grid-cols-4 sm:grid-cols-5 md:grid-cols-3
+          xl:grid-cols-4 2xl:grid-cols-5
+        justify-items-center gap-5 w-full"
+        >
+          <ShopPrdouctSize size="xs" />
           <div className="w-[4rem]">
             <input
               onClick={(e) => console.log(e)}
@@ -101,13 +106,25 @@ const ProductPage = () => {
           <h2 className="text-2xl font-semibold mb-4 lg:mb-8">
             Delivery and Returns
           </h2>
-          <p className="max-w-[450px] font-Garamond">
+          <p className="max-w-[450px] font-Garamond my-8 xl:text-lg">
             Shine offers a variety of shipping options for our clients. Delivery
             times include processing time at Shine. Each item ordered will be
             properly packaged in way that will ensure a safe delivery upon
             arrival.
           </p>
-          <p></p>
+          <p className="max-w-[450px] font-Garamond my-8 xl:text-lg">
+            For orders placed with Shine: No Rush (7-10 business days) and
+            Standard(3-7 days, including weekends) shipping Options are
+            available. Shine also offers shipping options available for
+            Expedited shipping and Express Shipping.
+          </p>
+          <p className="max-w-[450px] font-Garamond my-8 xl:text-lg">
+            We want to be certain that you are happy with your Shine pieces, so
+            returns and exchanges are easy! When using one of Shines return
+            shipping options, a shipping fee of 5.00 will be deducted from your
+            refund, and this fee will be waived if you place another order with
+            us within seven days.
+          </p>
         </div>
       </div>
     </div>
