@@ -33,34 +33,46 @@ const ShopProducts = () => {
 
   return (
     <>
-      <div
-        onMouseLeave={() => setMenuOpen(false)}
-        className={`dropdown container mx-auto`}
-      >
-        <button onMouseEnter={() => setMenuOpen(true)} className="">
-          Category{<IoMdArrowDropdown className="inline" />}
-        </button>
-        {menuOpen && (
-          <ul className={`border absolute z-20 w-[10rem] bg-white  `}>
-            <li id="all" onClick={CategoryChange}>
-              All
-            </li>
-            <li id="dress" onClick={CategoryChange}>
-              Dresses
-            </li>
-            <li id="jeans" onClick={CategoryChange}>
-              Jeans
-            </li>
-            <li id="shorts" onClick={CategoryChange}>
-              Shorts
-            </li>
-          </ul>
-        )}
-      </div>
-      <div className="grid grid-cols-4 justify-items-center container m-auto">
-        {category.map((item, key) => {
-          return <ShopProduct {...item} key={key} />;
-        })}
+      <div className="container mx-auto">
+        <div
+          onMouseLeave={() => setMenuOpen(false)}
+          className={`dropdown w-[12rem] tablet:w-[12rem]  mb-4 pl-1  sm:pl-4 `}
+        >
+          <div
+            onMouseEnter={() => setMenuOpen(true)}
+            className=" w-[12rem] h-10 text-start p-2 bg-[#EEEEEE] font-semibold cursor-default"
+          >
+            CATEGORY{<IoMdArrowDropdown className="inline" />}
+          </div>
+          {menuOpen && (
+            <ul
+              className={`border absolute z-20 w-[12rem] bg-white [&>li]:p-2 hover:[&>li]:bg-[#EEEEEE]
+            [&>li]:cursor-pointer hover:[&>li]:underline border-black
+             `}
+            >
+              <li id="all" onClick={CategoryChange}>
+                All
+              </li>
+              <li id="dress" onClick={CategoryChange}>
+                Dresses
+              </li>
+              <li id="jeans" onClick={CategoryChange}>
+                Jeans
+              </li>
+              <li id="shorts" onClick={CategoryChange}>
+                Shorts
+              </li>
+            </ul>
+          )}
+        </div>
+        <div
+          className="grid grid-cols-1 tablet:grid-cols-2 
+      sm:grid-cols-3 justify-items-center gap-4 lg:gap-8 container m-auto  mb-16 p-3 sm:p-5 sm:gap-6 lg:grid-cols-4"
+        >
+          {category.map((item, key) => {
+            return <ShopProduct {...item} key={key} />;
+          })}
+        </div>
       </div>
     </>
   );
