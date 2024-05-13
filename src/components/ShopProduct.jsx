@@ -19,16 +19,16 @@ const ShopProduct = (props) => {
     >
       <img
         className="h-[350px] h-full w-auto duration-700  cursor-pointer"
-        onMouseOver={mouseOver}
-        onMouseOut={mouseOut}
         src={image}
         alt=""
+        onMouseOver={mouseOver}
+        onMouseOut={mouseOut}
       />
 
       {/* <div
         className={`img h-[400px] w-full bg-cover bg-center bg-no-repeat bg-[image:var(${image})] `}
       ></div> */}
-      <h3>{name}</h3>
+      <h3 className="hover:underline">{name}</h3>
       <p>{price}</p>
     </Link>
   );

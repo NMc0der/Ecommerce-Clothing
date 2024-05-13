@@ -62,6 +62,12 @@ const ShopProducts = () => {
               <li id="shorts" onClick={CategoryChange}>
                 Shorts
               </li>
+              <li id="sweaters&cardigans" onClick={CategoryChange}>
+                Sweaters & Cardigans
+              </li>
+              <li id="shirts&blouses" onClick={CategoryChange}>
+                Shirts & Blouses
+              </li>
             </ul>
           )}
         </div>
