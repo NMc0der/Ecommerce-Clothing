@@ -30,9 +30,12 @@ const Navbar = () => {
             </Link>
           </div>
         </div>
-        <div className="checkout  text-end hover:cursor-pointer text-[1.5rem]">
+        <Link
+          className="checkout  text-end hover:cursor-pointer text-[1.5rem]"
+          to={"cart"}
+        >
           <FaShoppingCart />
-        </div>
+        </Link>
       </div>
     </nav>
   );
