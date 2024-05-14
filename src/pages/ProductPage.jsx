@@ -1,7 +1,10 @@
+import React, { useContext } from "react";
 import { useLocation } from "react-router-dom";
 import ShopPrdouctSize from "../components/ShopProductSize";
+import { ShopContext } from "../components/ShopContext";
 
 const ProductPage = () => {
+  const { addToCart, cartItems } = useContext(ShopContext);
   const location = useLocation().state;
   console.log(location.state);
   return (
@@ -81,6 +84,7 @@ const ProductPage = () => {
           <ShopPrdouctSize size="xl" />
         </fieldset>
         <button
+          onClick={() => addToCart(location.name)}
           className="border h-[4rem] font-semi-bold hover:font-bold w-[10rem] mb-8 mt-8 lg:mb-16 lg:mt-16 self-center tablet:self-center tablet:w-[20rem] 
         bg-black  hover:bg-white  hover:text-black text-white transition-[.5s] border-black "
         >

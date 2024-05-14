@@ -8,19 +8,22 @@ import Services from "./pages/Services";
 import About from "./pages/About";
 import Footer from "./components/Footer";
 import ProductPage from "./pages/ProductPage";
+import ShopContextProvider from "./components/ShopContext";
 
 function App() {
   return (
     <>
-      <Navbar />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="shop" element={<Shop />} />
-        <Route path="services" element={<Services />} />
-        <Route path="about" element={<About />} />
-        <Route path="product" element={<ProductPage />} />
-      </Routes>
-      <Footer />
+      <ShopContextProvider>
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="shop" element={<Shop />} />
+          <Route path="services" element={<Services />} />
+          <Route path="about" element={<About />} />
+          <Route path="product" element={<ProductPage />} />
+        </Routes>
+        <Footer />
+      </ShopContextProvider>
     </>
   );
 }
