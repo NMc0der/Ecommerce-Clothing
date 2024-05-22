@@ -28,6 +28,10 @@ const ShopContextProvider = (props) => {
     return setCartItems((prev) => ({ ...prev, [name]: prev[name] - 1 }));
   };
 
+  const removeItem = (name) => {
+    setCartItems((prev) => ({ ...prev, [name]: 0 }));
+  };
+
   const test = () => {
     console.log("test successful");
   };
@@ -37,7 +41,13 @@ const ShopContextProvider = (props) => {
   //   return console.log(props);
   // };
 
-  const contextValue = { cartItems, test, addToCart, removeFromCart };
+  const contextValue = {
+    cartItems,
+    test,
+    addToCart,
+    removeFromCart,
+    removeItem,
+  };
 
   return (
     <ShopContext.Provider value={contextValue}>

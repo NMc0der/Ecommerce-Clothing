@@ -3,12 +3,13 @@ import { useContext } from "react";
 import { ShopContext } from "./ShopContext";
 
 const CartItem = ({ props }) => {
-  const { cartItems, addToCart, removeFromCart } = useContext(ShopContext);
+  const { cartItems, addToCart, removeFromCart, removeItem } =
+    useContext(ShopContext);
   console.log(cartItems);
   return (
     <div className="border flex container m-auto ">
       <img className="h-[300px]" src={props.image} alt="" />
-      <div className="font-normal text-lg p-2">
+      <div className="font-normal text-lg p-2 w-[600px] ">
         <h2 className="pb-5 text-3xl">{props.name}</h2>
         <p className=" my-1">Color: hi</p>
         <p className="my-3">Price: {props.price}</p>
@@ -34,6 +35,12 @@ const CartItem = ({ props }) => {
             +
           </button>
         </div>
+      </div>
+      <div
+        onClick={() => removeItem(props.name)}
+        className=" text-end w-full p-2"
+      >
+        X
       </div>
     </div>
   );
