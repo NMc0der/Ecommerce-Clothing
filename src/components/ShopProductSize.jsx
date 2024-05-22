@@ -2,11 +2,15 @@ const ShopPrdouctSize = ({ size }) => {
   return (
     <div className="w-[4rem]">
       <input
+        required
         onClick={(e) => console.log(e)}
         className="hidden peer"
         type="radio"
         name="size"
         id={size}
+        value={size}
+        // checked={(data.size = size)}
+        // onChange={() => change(size)}
       />
       <label
         htmlFor={size}
