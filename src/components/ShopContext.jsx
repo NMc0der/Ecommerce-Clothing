@@ -32,6 +32,26 @@ const ShopContextProvider = (props) => {
     setCartItems((prev) => ({ ...prev, [name]: 0 }));
   };
 
+  const cartTotal = () => {
+    let total = 0;
+    cartItems.map((item) => {
+      total += item;
+    });
+    return total;
+  };
+
+  const getTotalItemAmount = () => {
+    let totalAmount = 0;
+    for (const item in cartItems) {
+      if (cartItems[item] > 0) {
+        // let itemInfo =
+        totalAmount += cartItems[item];
+      }
+    }
+    console.log(totalAmount);
+    return totalAmount;
+  };
+
   const test = () => {
     console.log("test successful");
   };
@@ -47,6 +67,8 @@ const ShopContextProvider = (props) => {
     addToCart,
     removeFromCart,
     removeItem,
+    cartTotal,
+    getTotalItemAmount,
   };
 
   return (
