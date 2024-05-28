@@ -1,10 +1,11 @@
 import { Link } from "react-router-dom";
 import { FaShoppingCart } from "react-icons/fa";
+import { GiShoppingBag } from "react-icons/gi";
 
 const Navbar = () => {
   return (
     <nav className="navbar border fixed  w-full">
-      <div className="wrapper border flex justify-between items-center  gap-6 mx-[10%] p-2">
+      <div className="wrapper border flex justify-between items-center  gap-6 mx-[10%] p-3">
         <div className=" flex  justify-between items-center gap-[10%] ">
           <Link to="/">
             <h1 className="navbar-logo text-[2rem] font-Lobster ">Shine</h1>
@@ -31,10 +32,17 @@ const Navbar = () => {
           </div>
         </div>
         <Link
-          className="checkout  text-end hover:cursor-pointer text-[1.5rem]"
+          className="checkout  text-end hover:cursor-pointer text-[2rem]"
           to={"cart"}
         >
-          <FaShoppingCart />
+          {/* <FaShoppingCart /> */}
+          <GiShoppingBag className="relative" />
+          <div
+            className=" rounded-full text-[1rem] text-center absolute h-[1.5rem] w-[1.5rem]
+          translate-x-[60%] translate-y-[-50%] bg-[#FF0000] text-white "
+          >
+            3
+          </div>
         </Link>
       </div>
     </nav>
