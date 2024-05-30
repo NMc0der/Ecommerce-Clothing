@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { FaShoppingCart } from "react-icons/fa";
 import { GiShoppingBag } from "react-icons/gi";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { ShopContext } from "./ShopContext";
 import { ProductList } from "../data/ProductList";
 const Navbar = () => {
@@ -37,28 +37,46 @@ const Navbar = () => {
     getTotalItemAmount();
   }
   console.log(getTotalItemAmount());
+
+  const [navColor, setNavColor] = useState(false);
+  const changeColor = () => {
+    if (window.scrollY >= 90) {
+      setNavColor(true);
+    } else setNavColor(false);
+  };
+
+  window.addEventListener("scroll", changeColor);
+
+  // className="navbar border fixed  w-full"
+
   return (
-    <nav className="navbar border fixed  w-full">
-      <div className="wrapper border flex justify-between items-center  gap-6 mx-[10%] p-3">
+    <nav
+      className={
+        navColor
+          ? "navbar  fixed w-full bg-white ease-in-out duration-200"
+          : "navbar  fixed  w-full ease-in-out duration-200"
+      }
+    >
+      <div className="wrapper  flex justify-between items-center  gap-6 mx-[10%] p-3">
         <div className=" flex  justify-between items-center gap-[10%] ">
           <Link to="/">
             <h1 className="navbar-logo text-[2rem] font-Lobster ">Shine</h1>
           </Link>
           <div className="link-wrapper w-[20rem]  font-Poppins">
             <Link
-              className="px-4 after:bg-[#fb8500] after:h-[3px] after:w-[0px] after:absolute relative after:bottom-[-10px] after:left-0 after:transition-[.3s] hover:after:w-full"
+              className="px-4 after:bg-[#000000] after:h-[3px] after:w-[0px] after:absolute relative after:bottom-[-10px] after:left-0 after:transition-[.3s] hover:after:w-full"
               to="shop"
             >
               SHOP
             </Link>
             <Link
-              className="px-4 after:bg-[#fb8500] after:h-[3px] after:w-[0px] after:absolute relative after:bottom-[-10px] after:left-0 after:transition-[.3s] hover:after:w-full"
+              className="px-4 after:bg-[#000000] after:h-[3px] after:w-[0px] after:absolute relative after:bottom-[-10px] after:left-0 after:transition-[.3s] hover:after:w-full"
               to="services"
             >
               SERVICES
             </Link>
             <Link
-              className="px-4 after:bg-[#fb8500] after:h-[3px] after:w-[0px] after:absolute relative after:bottom-[-10px] after:left-0 after:transition-[.3s] hover:after:w-full"
+              className="px-4 after:bg-[#000000] after:h-[3px] after:w-[0px] after:absolute relative after:bottom-[-10px] after:left-0 after:transition-[.3s] hover:after:w-full"
               to="about"
             >
               ABOUT
