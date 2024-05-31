@@ -29,7 +29,7 @@ const ShopProduct = (props) => {
         className={`img h-[400px] w-full bg-cover bg-center bg-no-repeat bg-[image:var(${image})] `}
       ></div> */}
       <h3 className="hover:underline">{name}</h3>
-      <p>${price}</p>
+      <p>${price.toFixed(2)}</p>
     </Link>
   );
 };

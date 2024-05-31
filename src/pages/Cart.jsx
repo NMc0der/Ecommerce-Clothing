@@ -18,7 +18,7 @@ const Cart = () => {
         })}
       </div>
       <h2>hi {totalAmount}</h2>
-      <CartOrderSummary />
+      <CartOrderSummary amount={totalAmount} />
     </div>
   );
 };
