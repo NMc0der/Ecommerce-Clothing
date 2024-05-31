@@ -34,7 +34,7 @@ const ProductPage = () => {
       </div>
       <div className="product-text 2xl:pt-[8rem] md:pt-[8rem] md:pl-8  2xl:pl-[2rem] m-2 flex flex-col">
         <h2 className="text-3xl lg:text-5xl">{location.name}</h2>
-        <p className="text-[#E72929] text-xl mt-3">{location.price}</p>
+        <p className="text-[#E72929] text-xl mt-3">${location.price}</p>
         <p className="mt-4 lg:mt-8 mb-2 lg:mb-4 text-lg lg:text-xl font-semibold">
           SIZE:
         </p>

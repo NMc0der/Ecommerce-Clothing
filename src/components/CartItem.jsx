@@ -12,7 +12,7 @@ const CartItem = ({ props }) => {
       <div className="font-normal text-lg p-2 w-[600px] ">
         <h2 className="pb-5 text-3xl">{props.name}</h2>
         <p className=" my-1">Color: hi</p>
-        <p className="my-3">Price: {props.price}</p>
+        <p className="my-3">Price: ${props.price}</p>
         <div className="flex justify-start items-center">
           <span>Qty: </span>
           <input

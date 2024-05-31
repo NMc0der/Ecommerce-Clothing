@@ -32,7 +32,7 @@ export const ProductList = [
     name: "Crochet Midi Dress",
     image: MidiDress,
     image2: MidiDress2,
-    price: "$50.00",
+    price: 50.0,
     type: "dress",
     details: [
       "Wide straps",
@@ -47,7 +47,7 @@ export const ProductList = [
     name: "Rockstar Skinny Jeans",
     image: RockstarAnkle,
     image2: RockstarAnkle2,
-    price: "$48.00",
+    price: 48.0,
     type: "jeans",
     details: [
       "64% cotton",
@@ -62,7 +62,7 @@ export const ProductList = [
     name: "Swing Dress V-neck",
     image: SwingDressBlk,
     image2: SwingDressBlk2,
-    price: "$48.00",
+    price: 48.0,
     type: "dress",
     details: [
       "Elasticized v-neck",
@@ -77,7 +77,7 @@ export const ProductList = [
     name: "High-Waisted Jean Shorts",
     image: HighWaistShorts,
     image2: HighWaistShorts2,
-    price: "$18.00",
+    price: 18.0,
     type: "shorts",
     details: [
       "Button front",
@@ -93,7 +93,7 @@ export const ProductList = [
     name: "Classic Cardigan",
     image: ClassicCardigan,
     image2: ClassicCardigan2,
-    price: "$40.00",
+    price: 40.0,
     type: "sweaters&cardigans",
     details: [
       "V-neck",
@@ -109,7 +109,7 @@ export const ProductList = [
     name: "High-Neck Tank",
     image: GreenTank,
     image2: GreenTank2,
-    price: "$12.00",
+    price: 12.0,
     type: "shirts&blouses",
     details: [
       "High crew neck",
