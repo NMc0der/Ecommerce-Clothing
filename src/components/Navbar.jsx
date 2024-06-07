@@ -1,7 +1,10 @@
 import { Link } from "react-router-dom";
 import { FaShoppingCart } from "react-icons/fa";
+import { GiHamburgerMenu } from "react-icons/gi";
+import { IoMdClose } from "react-icons/io";
+
 import { GiShoppingBag } from "react-icons/gi";
-import { useContext, useState } from "react";
+import { useContext, useState, useEffect } from "react";
 import { ShopContext } from "./ShopContext";
 import { ProductList } from "../data/ProductList";
 const Navbar = () => {
@@ -47,36 +50,49 @@ const Navbar = () => {
 
   window.addEventListener("scroll", changeColor);
 
+  const [menu, setMenu] = useState(false);
+
+  useEffect(() => {
+    const x = window.matchMedia("(max-width: 640px)");
+    function showSidebar() {
+      setMenu(true);
+    }
+    x.addListener(showSidebar);
+    return () => x.removeListener(showSidebar);
+  }, []);
+
+  // const showSidebar = () => {};
+
   // className="navbar border fixed  w-full"
 
   return (
     <nav
       className={
         navColor
-          ? "navbar  fixed w-full bg-white ease-in-out duration-200"
-          : "navbar  fixed  w-full ease-in-out duration-200"
+          ? "navbar  fixed w-full bg-white ease-in-out duration-200 z-10"
+          : "navbar  fixed  w-full ease-in-out duration-200 z-10"
       }
     >
       <div className="wrapper  flex justify-between items-center  gap-6 mx-[10%] p-3">
         <div className=" flex  justify-between items-center gap-[10%] ">
           <Link to="/">
-            <h1 className="navbar-logo text-[2rem] font-Lobster ">Shine</h1>
+            <h1 className="  navbar-logo text-[2rem] font-Lobster ">Shine</h1>
           </Link>
-          <div className="link-wrapper w-[20rem]  font-Poppins">
+          <div className="link-wrapper w-[20rem]  font-Poppins hidden sm:inline">
             <Link
-              className="px-4 after:bg-[#000000] after:h-[3px] after:w-[0px] after:absolute relative after:bottom-[-10px] after:left-0 after:transition-[.3s] hover:after:w-full"
+              className=" px-4 after:bg-[#000000] after:h-[3px] after:w-[0px] after:absolute relative after:bottom-[-10px] after:left-0 after:transition-[.3s] hover:after:w-full"
               to="shop"
             >
               SHOP
             </Link>
             <Link
-              className="px-4 after:bg-[#000000] after:h-[3px] after:w-[0px] after:absolute relative after:bottom-[-10px] after:left-0 after:transition-[.3s] hover:after:w-full"
+              className=" px-4 after:bg-[#000000] after:h-[3px] after:w-[0px] after:absolute relative after:bottom-[-10px] after:left-0 after:transition-[.3s] hover:after:w-full"
               to="services"
             >
               SERVICES
             </Link>
             <Link
-              className="px-4 after:bg-[#000000] after:h-[3px] after:w-[0px] after:absolute relative after:bottom-[-10px] after:left-0 after:transition-[.3s] hover:after:w-full"
+              className=" px-4 after:bg-[#000000] after:h-[3px] after:w-[0px] after:absolute relative after:bottom-[-10px] after:left-0 after:transition-[.3s] hover:after:w-full"
               to="about"
             >
               ABOUT
@@ -84,7 +100,7 @@ const Navbar = () => {
           </div>
         </div>
         <Link
-          className="checkout  text-end hover:cursor-pointer text-[2rem]"
+          className="checkout  text-end hover:cursor-pointer text-[2rem] hidden sm:block"
           to={"cart"}
         >
           {/* <FaShoppingCart /> */}
@@ -96,6 +112,42 @@ const Navbar = () => {
             {getTotalItemAmount()}
           </div>
         </Link>
+        <div
+          onClick={() => setMenu(false)}
+          className="sm:hidden justify-self-end cursor-pointer"
+        >
+          {<GiHamburgerMenu className="text-5xl" />}
+        </div>
+      </div>
+      <div
+        className={`fixed ${
+          menu && "hidden"
+        } top-0 right-0 h-[100vh] w-full z-50 bg-[rgba(225,225,225,.4)] backdrop-blur-md
+        flex flex-col  items-center gap-12 [&>div]:text-3xl font-[Poppins]
+        `}
+      >
+        <div
+          className="self-end cursor-pointer m-3"
+          onClick={() => setMenu(true)}
+        >
+          <IoMdClose className="text-5xl" />
+        </div>
+
+        <div className="after:bg-[#FF0000] after:h-[3px] after:w-[0px] after:absolute relative after:bottom-[-10px] after:left-0 after:transition-[.3s] hover:after:w-full hover:text-[#FF0000]">
+          <Link to="/">HOME</Link>
+        </div>
+        <div className="after:bg-[#FF0000] after:h-[3px] after:w-[0px] after:absolute relative after:bottom-[-10px] after:left-0 after:transition-[.3s] hover:after:w-full hover:text-[#FF0000]">
+          <Link to="shop">SHOP</Link>
+        </div>
+        <div className="after:bg-[#FF0000] after:h-[3px] after:w-[0px] after:absolute relative after:bottom-[-10px] after:left-0 after:transition-[.3s] hover:after:w-full hover:text-[#FF0000]">
+          <Link to="services">SERVICES</Link>
+        </div>
+        <div className="after:bg-[#FF0000] after:h-[3px] after:w-[0px] after:absolute relative after:bottom-[-10px] after:left-0 after:transition-[.3s] hover:after:w-full hover:text-[#FF0000]">
+          <Link to="about">ABOUT</Link>
+        </div>
+        <div className="after:bg-[#FF0000] after:h-[3px] after:w-[0px] after:absolute relative after:bottom-[-10px] after:left-0 after:transition-[.3s] hover:after:w-full hover:text-[#FF0000]  ">
+          <Link to="">CART</Link>
+        </div>
       </div>
     </nav>
   );
