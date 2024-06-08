@@ -50,7 +50,7 @@ const Navbar = () => {
 
   window.addEventListener("scroll", changeColor);
 
-  const [menu, setMenu] = useState(false);
+  const [menu, setMenu] = useState(true);
 
   useEffect(() => {
     const x = window.matchMedia("(max-width: 640px)");
@@ -133,20 +133,35 @@ const Navbar = () => {
           <IoMdClose className="text-5xl" />
         </div>
 
-        <div className="after:bg-[#FF0000] after:h-[3px] after:w-[0px] after:absolute relative after:bottom-[-10px] after:left-0 after:transition-[.3s] hover:after:w-full hover:text-[#FF0000]">
+        <div
+          onClick={() => setMenu(true)}
+          className="after:bg-[#FF0000] after:h-[3px] after:w-[0px] after:absolute relative after:bottom-[-10px] after:left-0 after:transition-[.3s] hover:after:w-full hover:text-[#FF0000]"
+        >
           <Link to="/">HOME</Link>
         </div>
-        <div className="after:bg-[#FF0000] after:h-[3px] after:w-[0px] after:absolute relative after:bottom-[-10px] after:left-0 after:transition-[.3s] hover:after:w-full hover:text-[#FF0000]">
+        <div
+          onClick={() => setMenu(true)}
+          className="after:bg-[#FF0000] after:h-[3px] after:w-[0px] after:absolute relative after:bottom-[-10px] after:left-0 after:transition-[.3s] hover:after:w-full hover:text-[#FF0000]"
+        >
           <Link to="shop">SHOP</Link>
         </div>
-        <div className="after:bg-[#FF0000] after:h-[3px] after:w-[0px] after:absolute relative after:bottom-[-10px] after:left-0 after:transition-[.3s] hover:after:w-full hover:text-[#FF0000]">
+        <div
+          onClick={() => setMenu(true)}
+          className="after:bg-[#FF0000] after:h-[3px] after:w-[0px] after:absolute relative after:bottom-[-10px] after:left-0 after:transition-[.3s] hover:after:w-full hover:text-[#FF0000]"
+        >
           <Link to="services">SERVICES</Link>
         </div>
-        <div className="after:bg-[#FF0000] after:h-[3px] after:w-[0px] after:absolute relative after:bottom-[-10px] after:left-0 after:transition-[.3s] hover:after:w-full hover:text-[#FF0000]">
+        <div
+          onClick={() => setMenu(true)}
+          className="after:bg-[#FF0000] after:h-[3px] after:w-[0px] after:absolute relative after:bottom-[-10px] after:left-0 after:transition-[.3s] hover:after:w-full hover:text-[#FF0000]"
+        >
           <Link to="about">ABOUT</Link>
         </div>
-        <div className="after:bg-[#FF0000] after:h-[3px] after:w-[0px] after:absolute relative after:bottom-[-10px] after:left-0 after:transition-[.3s] hover:after:w-full hover:text-[#FF0000]  ">
-          <Link to="">CART</Link>
+        <div
+          onClick={() => setMenu(true)}
+          className="after:bg-[#FF0000] after:h-[3px] after:w-[0px] after:absolute relative after:bottom-[-10px] after:left-0 after:transition-[.3s] hover:after:w-full hover:text-[#FF0000]  "
+        >
+          <Link to="cart">CART</Link>
         </div>
       </div>
     </nav>
