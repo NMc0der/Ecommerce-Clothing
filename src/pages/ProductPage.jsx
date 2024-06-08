@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { useLocation } from "react-router-dom";
 import ShopPrdouctSize from "../components/ShopProductSize";
 import { ShopContext } from "../components/ShopContext";
@@ -19,6 +19,7 @@ const ProductPage = () => {
   //     };
   //   });
   // }
+
   const location = useLocation().state;
   console.log(location.state);
   return (
@@ -58,11 +59,15 @@ const ProductPage = () => {
           xl:grid-cols-4 2xl:grid-cols-5
         justify-items-center gap-5 w-full"
           >
-            <ShopPrdouctSize size="xs" />
-            <ShopPrdouctSize size="s" />
-            <ShopPrdouctSize size="m" />
-            <ShopPrdouctSize size="l" />
-            <ShopPrdouctSize size="xl" />
+            <ShopPrdouctSize selected={false} size="xs" />
+
+            <ShopPrdouctSize selected={false} size="s" />
+
+            <ShopPrdouctSize selected={true} size="m" />
+
+            <ShopPrdouctSize selected={false} size="l" />
+
+            <ShopPrdouctSize selected={false} size="xl" />
           </fieldset>
           <button
             // onClick={() => addToCart(location.name)}

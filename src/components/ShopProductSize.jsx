@@ -1,10 +1,11 @@
-const ShopPrdouctSize = ({ size }) => {
+const ShopPrdouctSize = ({ size, selected }) => {
   return (
     <div className="w-[4rem]">
       <input
+        defaultChecked={selected}
         required
         onClick={(e) => console.log(e)}
-        className="hidden peer"
+        className="hidden peer "
         type="radio"
         name="size"
         id={size}
