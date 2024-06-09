@@ -16,7 +16,7 @@ const CartOrderSummary = ({ amount }) => {
   let totalAmount = (amount - savings()).toFixed(2);
   return (
     <div className="container flex flex-col gap-6 ">
-      <div className="summary border bg-[#EEEEEE]  w-[22rem] p-4">
+      <div className="summary border bg-[#EEEEEE]   w-[22rem] w-full p-4">
         <h3>Order Summary</h3>
         <div>
           <p className="text-lg flex place-content-between">
@@ -33,11 +33,13 @@ const CartOrderSummary = ({ amount }) => {
           </p>
           <hr align="right" className="border-y-[2px] mt-5  " />
           <div className="text-lg flex place-content-between  ">
-            <div className="font-bold text-2xl">
+            <div className="font-bold text-sm tablet:text-2xl">
               Est.Total{" "}
               <span className="text-xs font-normal">Before Tax & Shipping</span>
             </div>{" "}
-            <span className="font-bold text-2xl">${totalAmount}</span>
+            <span className="font-bold text-sm tablet:text-2xl">
+              ${totalAmount}
+            </span>
           </div>
           <button className="mt-6 max-h-16 bg-[#FF0000] text-white p-3 w-full rounded-md font-bold text-2xl">
             CHECKOUT
@@ -50,12 +52,13 @@ const CartOrderSummary = ({ amount }) => {
           </p>
         </div>
       </div>
-      <div className="promo border bg-[#EEEEEE] w-[22rem] p-4">
+      <div className="promo border bg-[#EEEEEE] w-[22rem] w-full p-4">
         <h2>Promos</h2>
         <div className="flex justify-between">
           <input
             onChange={() => setPromoError(false)}
-            className={`border-b-2 border-black focus:outline-none bg-inherit w-[60%] text-base p-2
+            className={`border-b-2 border-black focus:outline-none bg-inherit w-[60%] 
+            text-sm tablet:text-base p-2 
             ${promoError ? "border-red-600" : ""}`}
             placeholder="Enter Promo Code"
             type="text"
@@ -64,7 +67,7 @@ const CartOrderSummary = ({ amount }) => {
           />
           <button
             onClick={() => setPromoError(true)}
-            className="border border-black text-lg w-[6rem] h-[3rem]  bg-white
+            className="border border-black text-lg w-[5rem] h-[2.5rem] tablet:w-[6rem] tablet:h-[3rem]  bg-white
           hover:bg-black hover:text-white hover:border-white"
           >
             APPLY

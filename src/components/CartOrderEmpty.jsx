@@ -5,7 +5,7 @@ const CartOrderEmpty = () => {
     <div>
       <p>
         Your bag is empty.{" "}
-        <Link to={"/shop"} className="decoration-solid underline">
+        <Link to={"/shop"} className="decoration-solid  underline">
           Shop the Collection.
         </Link>
       </p>

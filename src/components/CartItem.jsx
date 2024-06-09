@@ -1,19 +1,28 @@
 import React from "react";
 import { useContext } from "react";
 import { ShopContext } from "./ShopContext";
+import { IoMdClose } from "react-icons/io";
 
 const CartItem = ({ props }) => {
   const { cartItems, addToCart, removeFromCart, removeItem } =
     useContext(ShopContext);
   console.log(cartItems);
   return (
-    <div className="border flex container m-auto ">
-      <img className="h-[300px]" src={props.image} alt="" />
-      <div className="font-normal text-lg p-2 w-[600px] ">
-        <h2 className="pb-5 text-3xl">{props.name}</h2>
-        <p className=" my-1">Color: hi</p>
-        <p className="my-3">Price: ${props.price.toFixed(2)}</p>
-        <div className="flex justify-start items-center">
+    <div className="border flex container mb-3 m-auto  ">
+      <img
+        className="h-[150px]  tablet:h-[200px] sm:h-[300px]"
+        src={props.image}
+        alt=""
+      />
+      <div className="font-normal text-lg p-2 w-[800px] pr-0">
+        <h2 className="pb-5 sm:text-3xl font-bold sm:font-normal">
+          {props.name}
+        </h2>
+        <p className=" my-1 text-sm tablet:text-base sm:text-lg">Color: hi</p>
+        <p className="my-3 text-sm tablet:text-base sm:text-lg">
+          Price: ${props.price.toFixed(2)}
+        </p>
+        <div className="flex justify-start items-center text-sm tablet:text-base sm:text-lg">
           <span>Qty: </span>
           <input
             readOnly
@@ -36,11 +45,11 @@ const CartItem = ({ props }) => {
           </button>
         </div>
       </div>
-      <div
-        onClick={() => removeItem(props.name)}
-        className=" text-end w-full p-2"
-      >
-        X
+      <div className=" w-full pr-2 pt-2 flex justify-end">
+        <IoMdClose
+          className="cursor-pointer"
+          onClick={() => removeItem(props.name)}
+        />
       </div>
     </div>
   );
