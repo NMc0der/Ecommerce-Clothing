@@ -1,5 +1,11 @@
+import AboutCeo from "../components/AboutCeo";
+
 const About = () => {
-  return <div>About</div>;
+  return (
+    <div>
+      <AboutCeo />
+    </div>
+  );
 };
 
 export default About;
