@@ -5,24 +5,33 @@ import { FaInstagram } from "react-icons/fa";
 
 const AboutCeo = () => {
   return (
-    <div className=" p-4 pt-36 grid flex justify-center pb-20">
-      <h2 className="text-4xl text-center overflow-hidden font-bold font-[garmond] mb-5 ">
+    <div className=" p-4 pt-36 grid flex justify-center pb-20 md:grid-cols-5 md:items-start  md:gap-9 container mx-auto">
+      <h2 className="text-4xl text-center overflow-hidden font-bold font-[garmond] mb-5 md:hidden  ">
         a note from <br /> our ceo
       </h2>
-      <div className="ceo-img flex justify-center items-center  w-full container mx-auto">
+      <div
+        className="ceo-img flex justify-center items-center  w-full container mx-auto md:col-span-2 md:col-start-4
+       "
+      >
         {/* <div
           className="border-red-500 h-[700px] w-[80%] border-2 bg-[#FFEAE3] absolute self-start  "
         ></div> */}
 
-        <div className="h-[300px] tablet:h-[600px] sm:h-[750px] w-[95%]  bg-[#FFE6E6] translate-y-14 absolute"></div>
+        <div
+          className="h-[300px] w-[95%] tablet:h-[600px] sm:h-[750px] md:h-[800px] xl:h-[750px]  md:w-[45%] 2xl:w-[700px]   bg-[#FFE6E6] translate-y-14
+        md:translate-y-[15rem] lg:translate-y-[10rem] xl:translate-y-[4rem] absolute"
+        ></div>
         <img
-          className=" max-h-[800px] mx-12 mb-2 relative"
+          className=" max-h-[800px] mx-12 mb-2 relative   col-end-5"
           src={ceoPic1}
           alt=""
         />
       </div>
 
-      <div className="ceo-note mt-20 font-[Garamond] text-lg">
+      <div className="ceo-note mt-20 font-[Garamond] text-lg  md:col-span-3  md:row-start-1 z-10 md:mt-0">
+        <h2 className="hidden md:block text-5xl  overflow-hidden font-bold font-[garmond] mb-5 ">
+          A note from <br /> our ceo
+        </h2>
         <p className=" mb-8">
           We believe that there are many women all across the world that have
           the need and natural gift to be able to connect with one another,
