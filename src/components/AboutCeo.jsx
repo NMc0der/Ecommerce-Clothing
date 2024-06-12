@@ -1,20 +1,65 @@
 import ceoPic1 from "../assets/AboutUs/tamara-bellis-eDVQwVMLMgU-unsplash.jpg";
 ("../assets/MidiDress/cn55589909.avif");
+import { Link } from "react-router-dom";
+import { FaInstagram } from "react-icons/fa";
+
 const AboutCeo = () => {
   return (
     <div className=" p-4 pt-36 grid flex justify-center pb-20">
-      <h2>a note from our ceo</h2>
-      <div className="ceo-img flex justify-center items-center  w-full">
+      <h2 className="text-4xl text-center overflow-hidden font-bold font-[garmond] mb-5 ">
+        a note from <br /> our ceo
+      </h2>
+      <div className="ceo-img flex justify-center items-center  w-full container mx-auto">
         {/* <div
           className="border-red-500 h-[700px] w-[80%] border-2 bg-[#FFEAE3] absolute self-start  "
         ></div> */}
 
-        <div className="h-[400px] w-[80%] bg-red-500 mb-6 absolute"></div>
-        <img className=" h-[500px] relative" src={ceoPic1} alt="" />
+        <div className="h-[300px] tablet:h-[600px] sm:h-[750px] w-[95%]  bg-[#FFE6E6] translate-y-14 absolute"></div>
+        <img
+          className=" max-h-[800px] mx-12 mb-2 relative"
+          src={ceoPic1}
+          alt=""
+        />
       </div>
-      <div className="ceo-note"></div>
+
+      <div className="ceo-note mt-20 font-[Garamond] text-lg">
+        <p className=" mb-8">
+          We believe that there are many women all across the world that have
+          the need and natural gift to be able to connect with one another,
+          changing and affecting one anothers lives. We believe this natural
+          gift is what drives our success and fulfillment.{" "}
+        </p>
+        <p className="mb-8">
+          Shine was made with the understanding that when we are working
+          together, we are better at what we are persuing. Together we can build
+          businesses with each other, or we can simply enjoy life and help one
+          another explore their own personal style. we believe that this
+          connection helps establish a greater confidence and then add in a
+          stylish outfit to go along with that confidence and we will be ready
+          to take on life feeling like the person we truly are. we will be able
+          to share are contributions to the world and those around us.
+        </p>
+        <p className="mb-8">
+          To put it simply, we believe clothing can change lives.
+        </p>
+        <p className="mb-4">
+          Shine gives a great opportunity to achieve this connection and
+          confidence through are technology and we want you to join in because
+          we belive together we can find our true style.{" "}
+        </p>
+        <span className="font-[Parisienne] text-7xl">Olivia</span>
+        <p>Olivia Taylor</p>
+        <p>Chief Executive Officer</p>
+        <div className="flex items-center">
+          {" "}
+          <FaInstagram />
+          <Link className="ml-1 underline"> @oliviataylor_shine</Link>
+        </div>
+      </div>
     </div>
   );
 };
 
 export default AboutCeo;
+
+// before:h-[34rem] before:w-[15rem] before:bg-red-500 before:absolute

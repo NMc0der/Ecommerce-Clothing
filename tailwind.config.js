@@ -9,6 +9,7 @@ export default {
         Lobster: ["Lobster", "cursive"],
         Courgette: ["Courgette", "cursive"],
         Garamond: ["EB Garamond", "serrif"],
+        Parisienne: ["Parisienne", "cursive"],
       },
       screens: {
         tablet: "445px",
