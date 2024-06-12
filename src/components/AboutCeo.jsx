@@ -62,7 +62,10 @@ const AboutCeo = () => {
         <div className="flex items-center">
           {" "}
           <FaInstagram />
-          <Link className="ml-1 underline"> @oliviataylor_shine</Link>
+          <Link to={"https://www.instagram.com/"} className="ml-1 underline">
+            {" "}
+            @oliviataylor_shine
+          </Link>
         </div>
       </div>
     </div>
