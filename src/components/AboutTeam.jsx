@@ -14,72 +14,87 @@ import dhr from "../assets/AboutUs/slav-romanov-BrEAp01_m5w-unsplash.jpg";
 const AboutTeam = () => {
   return (
     <div className="bg-[#EEEEEE] py-[4rem]">
-      <h3 className="text-center font-semibold text-xl tablet:text-3xl p-4">
+      <h3 className="text-center font-semibold text-xl tablet:text-3xl p-3">
         OUR LEADERSHIP TEAM
       </h3>
-      <div className="team grid grid-cols-2 font-[Garamond]  justify-items-center container mx-auto w-fit gap-6 tablet:gap-6  p-2">
-        <AboutMember
-          pic={ceo}
-          name={"Olivia Taylor"}
-          title={"Chief Executive Office"}
-          social={"@oliviataylor_shine"}
-        />
-        <AboutMember
-          pic={coFounder}
-          name={"Amanda Wilson"}
-          title={"Chief Culture Office & Co-Founder"}
-        />
-        <AboutMember
-          pic={cdo}
-          name={"Sophia Jones"}
-          title={"Chief Design Officer"}
-          social={"@sophia.jones"}
-        />
-        <AboutMember
-          pic={efd}
-          name={"Ashley Martin"}
-          title={"Executive Fashion Director"}
-        />
-        <AboutMember
-          pic={pfs}
-          name={"Elizabeth Baker"}
-          title={"President of Field Strategy"}
-        />
-        <AboutMember
-          pic={coo}
-          name={"Brandon Thomas"}
-          title={"Chief Operating Officer"}
-        />
-        <AboutMember
-          pic={vpf}
-          name={"Christina Smith"}
-          title={"Vice President of Finance"}
-        />
-        <AboutMember
-          pic={vps}
-          name={"Grace Carter"}
-          title={"Vice President of Sourcing"}
-        />
-        <AboutMember
-          pic={cfo}
-          name={"Connor James"}
-          title={"Chief Information Officer"}
-        />
-        <AboutMember
-          pic={vpc}
-          name={"Jared Collins"}
-          title={"Vice President of Events"}
-        />
-        <AboutMember
-          pic={vpm}
-          name={"Lily Price"}
-          title={"Vice President of Marketing"}
-        />
-        <AboutMember
-          pic={dhr}
-          name={"Hannah Sanders"}
-          title={"Director of Human Resources"}
-        />
+      <div
+        className="team  grid-cols-2 font-[Garamond]  justify-items-center 
+      container mx-auto w-fit gap-6 tablet:gap-6  p-2"
+      >
+        <div className="flex justify-center gap-2 tablet:gap-6 2xl:gap-12 my-6 2xl:my-12">
+          <AboutMember
+            pic={ceo}
+            name={"Olivia Taylor"}
+            title={"Chief Executive Office"}
+            social={"@oliviataylor_shine"}
+          />
+          <AboutMember
+            pic={coFounder}
+            name={"Amanda Wilson"}
+            title={"Chief Culture Office & Co-Founder"}
+          />
+        </div>
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 tablet:gap-6 2xl:gap-12 justify-items-center">
+          <AboutMember
+            pic={cdo}
+            name={"Sophia Jones"}
+            title={"Chief Design Officer"}
+            social={"@sophia.jones"}
+          />
+          <AboutMember
+            pic={efd}
+            name={"Ashley Martin"}
+            title={"Executive Fashion Director"}
+          />
+          <AboutMember
+            pic={pfs}
+            name={"Elizabeth Baker"}
+            title={"President of Field Strategy"}
+          />
+          <AboutMember
+            pic={coo}
+            name={"Brandon Thomas"}
+            title={"Chief Operating Officer"}
+          />
+          <AboutMember
+            pic={vpf}
+            name={"Christina Smith"}
+            title={"Vice President of Finance"}
+          />
+          <AboutMember
+            pic={vps}
+            name={"Grace Carter"}
+            title={"Vice President of Sourcing"}
+          />
+          <AboutMember
+            pic={cfo}
+            name={"Connor James"}
+            title={"Chief Information Officer"}
+          />
+          <AboutMember
+            pic={vpc}
+            name={"Jared Collins"}
+            title={"Vice President of Events"}
+          />
+          <div className="lg:col-start-2 lg:col-end-3">
+            <AboutMember
+              pic={vpm}
+              name={"Lily Price"}
+              title={"Vice President of Marketing"}
+            />
+          </div>
+          <div
+            className={
+              "md:col-start-2 md:col-end-3 lg:col-start-3 lg:col-end-4"
+            }
+          >
+            <AboutMember
+              pic={dhr}
+              name={"Hannah Sanders"}
+              title={"Director of Human Resources"}
+            />
+          </div>
+        </div>
       </div>
     </div>
   );
