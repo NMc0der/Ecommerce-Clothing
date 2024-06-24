@@ -1,5 +1,11 @@
+import ServicesHero from "../components/ServicesHero";
+
 const Services = () => {
-  return <div>Services</div>;
+  return (
+    <div>
+      <ServicesHero />
+    </div>
+  );
 };
 
 export default Services;
