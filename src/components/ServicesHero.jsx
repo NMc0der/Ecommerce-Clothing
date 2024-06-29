@@ -3,7 +3,7 @@ import hero from "../assets/Services/roberto-nickson-vRAYwESFc-U-unsplash.jpg";
 const ServicesHero = () => {
   return (
     <div
-      className=" h-[90vh] max-width-[100%]  border-black border-2 
+      className=" h-[90vh] max-width-[100%]   
      bg-cover bg-heroServices2 flex lg:justify-end items-center "
     >
       <div className="text w-[80%] md:w-[25rem] xl:w-[40rem]  m-10 xl:m-[2rem] 2xl:m-[15rem]  font-[Garamond]">
@@ -26,3 +26,5 @@ export default ServicesHero;
 // h-[90vh]
 
 // bg-heroServices3
+
+// border-black border-2
