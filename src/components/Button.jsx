@@ -3,7 +3,7 @@ const Button = ({ border, text }) => {
     <button
       className={`${
         border ? "border" : "border-none"
-      } h-[3.5rem] w-[10rem] bg-black  hover:bg-white hover:text-black transition-[.5s] 
+      } h-[3.5rem] w-[10rem] bg-black text-white  hover:bg-white hover:text-black transition-[.5s] 
       font-Poppins`}
     >
       {text}
