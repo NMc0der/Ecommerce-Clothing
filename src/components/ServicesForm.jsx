@@ -59,7 +59,7 @@ const ServicesForm = () => {
         email: "",
       });
     }
-
+    e.target.reset();
     console.log("important");
   };
 
