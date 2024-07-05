@@ -3,11 +3,64 @@ import { FaCheck } from "react-icons/fa6";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCheck } from "@fortawesome/free-solid-svg-icons";
 import Button from "./Button";
+import React, { useState } from "react";
 
 const ServicesForm = () => {
+  const [errors, setErrors] = useState({ email: "" });
+  const [nameErrors, setNameErrors] = useState({ name: "" });
+  const [lastErrors, setLastErrors] = useState({ last: "" });
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("hi");
+    console.log(e);
+    console.log(e.target[1].value);
+    if (e.target[1].value === "" || e.target[1].value == null) {
+      console.log("yooo");
+      return setNameErrors({
+        ...nameErrors,
+        name: "First name is required",
+      });
+    } else {
+      console.log("working");
+      console.log(errors.name);
+      setNameErrors({
+        ...nameErrors,
+        name: "",
+      });
+      console.log(errors.name);
+    }
+
+    if (e.target[2].value === "" || e.target[2].value == null) {
+      console.log("yooo");
+      return setLastErrors({
+        ...lastErrors,
+        last: "Last name is required",
+      });
+    } else {
+      console.log("working");
+      console.log(errors.name);
+      setLastErrors({
+        ...lastErrors,
+        last: "",
+      });
+      console.log(errors.name);
+    }
+
+    console.log(errors);
+
+    if (!e.target[3].value.match(/^[a-z0-9]+@[a-z]+\.[a-z]{2,3}$/)) {
+      return setErrors({
+        ...errors,
+        email: "Please enter a valid email address.",
+      });
+    } else {
+      console.log("wassup");
+      setErrors({
+        ...errors,
+        email: "",
+      });
+    }
+
+    console.log("important");
   };
 
   return (
@@ -37,6 +90,11 @@ const ServicesForm = () => {
           </select>
           <label className="mt-3 font-semibold text-lg" htmlFor="first">
             First Name
+            {nameErrors.name && (
+              <span className="text-red-500 text-sm lg:text-base ml-3">
+                {nameErrors.name}
+              </span>
+            )}
           </label>
           <input
             placeholder="First Name"
@@ -47,6 +105,11 @@ const ServicesForm = () => {
           />
           <label className="mt-3 font-semibold text-lg" htmlFor="last">
             Last Name
+            {lastErrors.last && (
+              <span className="text-red-500 text-sm lg:text-base ml-3">
+                {lastErrors.last}
+              </span>
+            )}
           </label>
           <input
             placeholder="Last Name"
@@ -57,11 +120,16 @@ const ServicesForm = () => {
           />
           <label className="mt-3 font-semibold text-lg" htmlFor="email">
             Email Address
+            {errors.email && (
+              <span className="text-red-500 text-sm lg:text-base ml-3">
+                {errors.email}
+              </span>
+            )}
           </label>
           <input
             placeholder="Email"
             className="border-2 border-gray-500 p-[.75rem] mb-3 px-4  text-lg outline-none "
-            type="email"
+            type="text"
             name="email"
             id="email"
           />
