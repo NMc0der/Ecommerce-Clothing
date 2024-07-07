@@ -10,10 +10,12 @@ import Footer from "./components/Footer";
 import ProductPage from "./pages/ProductPage";
 import ShopContextProvider from "./components/ShopContext";
 import Cart from "./pages/Cart";
+import ScrollToTop from "./components/ScrollToTop";
 
 function App() {
   return (
     <>
+      <ScrollToTop />
       <ShopContextProvider>
         <Navbar />
         <Routes>
