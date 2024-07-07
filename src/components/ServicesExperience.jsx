@@ -19,13 +19,17 @@ const ServicesExerience = () => {
         <h3 className="text-3xl font-bold mt-[2rem]">
           Virtual Styling Services
         </h3>
-        <p className="text-xl mt-[.5rem] mb-[3rem]">
+        <p className="text-xl mt-[.5rem] mb-[2rem]">
           Cant meet up in person? Try Shine online. It's very easy and fun for
           our customers who have a hard time meeting in person. There's little
           to no setup, and the whole experience only takes about an hour.
         </p>
-        <button onClick={() => handleScroll()} className="border border-black">
-          hi
+        <button
+          onClick={() => handleScroll()}
+          className="mb-[3rem] h-[3.5rem] w-[13rem] bg-black text-white mt-3 
+           hover:bg-white hover:text-black transition-[.5s] font-Poppins border border-black text-lg"
+        >
+          GET IN TOUCH
         </button>
       </div>
       <div
