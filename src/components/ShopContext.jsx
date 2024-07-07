@@ -1,4 +1,4 @@
-import React, { createContext, useState } from "react";
+import React, { createContext, useRef, useState } from "react";
 import { ProductList } from "../data/ProductList";
 
 export const ShopContext = createContext(null);
@@ -75,6 +75,13 @@ const ShopContextProvider = (props) => {
     console.log("test successful");
   };
 
+  const ref = useRef(null);
+
+  const handleScroll = () => {
+    console.log("handle scroll");
+    ref.current?.scrollIntoView({ behavior: "smooth" });
+  };
+
   // const addTo = (props) => {
   //   // setCartItems((prev) =>  )
   //   return console.log(props);
@@ -89,6 +96,8 @@ const ShopContextProvider = (props) => {
     cartTotal,
     getTotalItemAmount,
     getTotalPrice,
+    handleScroll,
+    ref,
   };
 
   return (

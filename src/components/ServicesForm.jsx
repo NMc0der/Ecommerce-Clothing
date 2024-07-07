@@ -3,7 +3,8 @@ import { FaCheck } from "react-icons/fa6";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCheck } from "@fortawesome/free-solid-svg-icons";
 import Button from "./Button";
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
+import { ShopContext } from "./ShopContext";
 
 const ServicesForm = () => {
   const [errors, setErrors] = useState({ email: "" });
@@ -63,9 +64,11 @@ const ServicesForm = () => {
     console.log("important");
   };
 
+  const { ref } = useContext(ShopContext);
+
   return (
-    <div className="mx-auto container  p-3">
-      <h2 className="font-[Garmond] text-center text-4xl m-[1.5rem]">
+    <div ref={ref} className="mx-auto container py-20 p-3">
+      <h2 className="font-[Garmond] text-center  text-4xl m-[1.5rem]">
         Connect with a Personsal Stylist
       </h2>
       <div>
@@ -74,7 +77,7 @@ const ServicesForm = () => {
           action=""
           onSubmit={handleSubmit}
         >
-          <h4 className="font-semibold mt-[1rem]">
+          {/* <h4 className="font-semibold mt-[1rem]">
             WHAT ARE YOU INTERESTED IN?
           </h4>
 
@@ -87,7 +90,7 @@ const ServicesForm = () => {
               Purchasing With a Stylist
             </option>
             <option value="">Hosting Service</option>
-          </select>
+          </select> */}
           <label className="mt-3 font-semibold text-lg" htmlFor="first">
             First Name
             {nameErrors.name && (

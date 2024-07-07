@@ -1,6 +1,10 @@
+import { useContext } from "react";
 import pic1 from "../assets/Services/tamara-bellis-pONwcn4IcVU-unsplash.jpg";
+import { ShopContext } from "./ShopContext";
 
 const ServicesExerience = () => {
+  const { handleScroll } = useContext(ShopContext);
+
   return (
     <div className="md:flex md:flex-row-reverse justify-center items-center container mx-auto my-16 gap-10 ">
       <div className="text container mx-auto font-[Garamond] p-2">
@@ -20,6 +24,9 @@ const ServicesExerience = () => {
           our customers who have a hard time meeting in person. There's little
           to no setup, and the whole experience only takes about an hour.
         </p>
+        <button onClick={() => handleScroll()} className="border border-black">
+          hi
+        </button>
       </div>
       <div
         className=" mb-[2rem] tablet:mb-[3rem] p-2 ceo-img flex justify-center items-center  w-full 
