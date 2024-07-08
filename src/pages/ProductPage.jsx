@@ -2,6 +2,7 @@ import React, { useContext, useState } from "react";
 import { useLocation } from "react-router-dom";
 import ShopPrdouctSize from "../components/ShopProductSize";
 import { ShopContext } from "../components/ShopContext";
+import { toast } from "react-toastify";
 
 const ProductPage = () => {
   const { addToCart, cartItems } = useContext(ShopContext);
@@ -48,6 +49,16 @@ const ProductPage = () => {
             addToCart(location.name);
             const formData = new FormData(e.target.value);
             console.log(formData);
+            toast.success("Item added to cart!", {
+              position: "bottom-right",
+              autoClose: 5000,
+              hideProgressBar: false,
+              closeOnClick: true,
+              pauseOnHover: true,
+              draggable: true,
+              progress: undefined,
+              theme: "light",
+            });
             // console.log(sizeData);
             // console.log(e);
 
