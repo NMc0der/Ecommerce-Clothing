@@ -5,6 +5,7 @@ import { faCheck } from "@fortawesome/free-solid-svg-icons";
 import Button from "./Button";
 import React, { useContext, useState } from "react";
 import { ShopContext } from "./ShopContext";
+import { toast } from "react-toastify";
 
 const ServicesForm = () => {
   const [errors, setErrors] = useState({ email: "" });
@@ -61,7 +62,19 @@ const ServicesForm = () => {
       });
     }
     e.target.reset();
-    console.log("important");
+    toast.info(
+      "Thank you, an email with more information has been sent to you!",
+      {
+        position: "bottom-right",
+        autoClose: 8000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+      }
+    );
   };
 
   const { ref } = useContext(ShopContext);
@@ -77,20 +90,20 @@ const ServicesForm = () => {
           action=""
           onSubmit={handleSubmit}
         >
-          {/* <h4 className="font-semibold mt-[1rem]">
+          <h4 className="font-semibold mt-[1rem] hidden">
             WHAT ARE YOU INTERESTED IN?
           </h4>
 
           <select
             name=""
             id=""
-            className="border-2 border-gray-500 p-[.75rem]  px-4 py-3 mb-3  text-lg"
+            className="border-2 border-gray-500 p-[.75rem]  px-4 py-3 mb-3  text-lg hidden"
           >
             <option className="" value="">
               Purchasing With a Stylist
             </option>
             <option value="">Hosting Service</option>
-          </select> */}
+          </select>
           <label className="mt-3 font-semibold text-lg" htmlFor="first">
             First Name
             {nameErrors.name && (
@@ -167,6 +180,7 @@ const ServicesForm = () => {
             </p>
           </div>
           <button
+            onClick={() => console.log("hi")}
             className="h-[3.5rem] w-[13rem] bg-black text-white mt-3 
            hover:bg-white hover:text-black transition-[.5s] font-Poppins border border-black text-lg"
           >
