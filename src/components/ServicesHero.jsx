@@ -4,9 +4,12 @@ const ServicesHero = () => {
   return (
     <div
       className=" h-[90vh] max-width-[100%]   
-     bg-cover bg-heroServices2  flex lg:justify-end items-center "
+     bg-cover bg-heroServices2  flex lg:justify-end  items-end lg:items-center"
     >
-      <div className="text w-[80%] md:w-[25rem] xl:w-[40rem]  m-10 xl:m-[2rem] 2xl:m-[15rem]  font-[Garamond]">
+      <div
+        className="text w-[80%] md:w-[25rem] xl:w-[40rem]  m-10 xl:m-[2rem] 2xl:m-[15rem]  font-[Garamond]
+    bg-white bg-opacity-70 rounded-md 2xl:p-4"
+      >
         <h3 className="text-3xl xl:text-5xl font-[Poppins] m-2">
           YOUR PERFECT STYLE
         </h3>
