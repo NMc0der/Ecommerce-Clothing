@@ -69,8 +69,8 @@ const Navbar = () => {
     <nav
       className={
         navColor
-          ? "navbar  fixed w-full bg-white ease-in-out duration-200 z-20"
-          : "navbar  fixed  w-full ease-in-out duration-200 z-20"
+          ? "navbar  fixed w-full bg-white ease-in-out duration-200 z-20 "
+          : "navbar  fixed  w-full ease-in-out duration-200 z-20  after:bg-white after:content-center after:ml-[5%]  after:h-[2px] after:w-[90%] after:absolute"
       }
     >
       <div className="wrapper  flex justify-between items-center  gap-6 mx-[10%] p-3">

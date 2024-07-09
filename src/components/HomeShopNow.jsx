@@ -5,7 +5,7 @@ const HomeShopNow = () => {
   return (
     <div
       className="border h-[90vh] 2xl:h-[100vh] max-width-[100%]   
-     bg-cover bg-homeShop1 flex lg:justify-end items-center 2xl:justify-center"
+     bg-cover bg-homeShop1 flex lg:justify-end items-center 2xl:justify-center lg:pr-8 2xl:pr-0"
     >
       <div className="text 2xl:ml-[25rem] mb-[20rem]">
         <h2 className="text-red-500 text-center bg-white rounded-md p-2 text-5xl 2xl:text-7xl m-4 font-Garamond">
