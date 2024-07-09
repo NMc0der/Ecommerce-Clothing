@@ -8,7 +8,7 @@ const HomeCategory = () => {
   };
 
   return (
-    <div className="m-5 mt-8 container m-auto ">
+    <div className="m-5 mt-10 mb-10 container m-auto ">
       <h2 className="text-center text-3xl tracking-widest">
         SHOP BY <span className="font-bold">CATEGORY</span>
       </h2>
