@@ -3,6 +3,7 @@ import HomeAbout from "../components/HomeAbout";
 import HomeCategory from "../components/HomeCategory";
 import HomeFeatured from "../components/HomeFeatured";
 import HomeHashtag from "../components/HomeHashtag";
+import HomeShopNow from "../components/HomeShopNow";
 
 const Home = () => {
   return (
@@ -10,6 +11,7 @@ const Home = () => {
       <HeroHome />
       <HomeCategory />
       <HomeAbout />
+      <HomeShopNow />
       <HomeHashtag />
       <HomeFeatured />
     </div>
