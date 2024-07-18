@@ -16,7 +16,7 @@ const HomeShopNow = () => {
           to={"/shop"}
         >
           <button
-            className="h-[3.5rem] w-[13rem] bg-black text-white bg-white text-black mt-3 
+            className="h-[3.5rem] w-[13rem]  bg-white text-black mt-3 
            hover:bg-black hover:text-white transition-[.5s] font-Poppins  border-black text-lg"
           >
             SHOP NOW
