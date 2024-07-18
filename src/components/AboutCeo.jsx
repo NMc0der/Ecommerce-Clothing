@@ -7,7 +7,7 @@ import { FaInstagram } from "react-icons/fa";
 
 const AboutCeo = () => {
   return (
-    <div className=" overflow-x-hidden p-4 pt-36 grid flex justify-center pb-20 md:grid-cols-5 md:items-start  md:gap-9 container mx-auto relative">
+    <div className=" overflow-x-hidden p-4 pt-36 grid  justify-center pb-20 md:grid-cols-5 md:items-start  md:gap-9 container mx-auto relative">
       <h2 className="text-4xl text-center overflow-hidden font-bold font-[garmond] mb-5 md:hidden   ">
         a note from <br /> our ceo
       </h2>

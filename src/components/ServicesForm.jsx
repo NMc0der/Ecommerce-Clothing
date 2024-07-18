@@ -1,9 +1,9 @@
-import { MdKeyboardArrowDown } from "react-icons/md";
-import { FaCheck } from "react-icons/fa6";
+// import { MdKeyboardArrowDown } from "react-icons/md";
+// import { FaCheck } from "react-icons/fa6";
+// import Button from "./Button";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCheck } from "@fortawesome/free-solid-svg-icons";
-import Button from "./Button";
-import React, { useContext, useState } from "react";
+import { useContext, useState } from "react";
 import { ShopContext } from "./ShopContext";
 import { toast } from "react-toastify";
 

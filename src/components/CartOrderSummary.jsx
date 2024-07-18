@@ -1,6 +1,6 @@
 import { useState } from "react";
 // import RockstarAnkle from "../assets/RockstarAnkle/cn55722604.avif";
-import PaypalLogo from "../assets/paypal-svgrepo-com.png";
+import PaypalLogo from "../assets/Logos/paypal-svgrepo-com.png";
 
 const CartOrderSummary = ({ amount }) => {
   const savings = () => {
@@ -10,8 +10,6 @@ const CartOrderSummary = ({ amount }) => {
   };
 
   const [promoError, setPromoError] = useState(false);
-
-  const showError = () => {};
 
   let totalAmount = (amount - savings()).toFixed(2);
   return (

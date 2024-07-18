@@ -1,9 +1,9 @@
 import { Link } from "react-router-dom";
-import theTimes from "../assets/The_Times_100-logo-1294566530-seeklogo.com.png";
-import fastCompany from "../assets/fast-company-1-logo.png";
-import createCultivate from "../assets/1519404219259.png";
-import vouge from "../assets/Vogue-logo.png";
-import forbes from "../assets/Forbes-Logo-PNG-Pic.png";
+import theTimes from "../assets/Logos/The_Times_100-logo-1294566530-seeklogo.com.png";
+import fastCompany from "../assets/Logos/fast-company-1-logo.png";
+import createCultivate from "../assets/Logos/1519404219259.png";
+import vouge from "../assets/Logos/Vogue-logo.png";
+import forbes from "../assets/Logos/Forbes-Logo-PNG-Pic.png";
 const HomeFeatured = () => {
   return (
     <div className="min-h-[400px] bg-[#EEEEEE] p-3 lg:p-12 2xl:p-8">

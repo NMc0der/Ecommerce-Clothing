@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import fassionGirl from "../assets/PngItem_3977074.png";
+import fassionGirl from "../assets/Home/PngItem_3977074.png";
 import Button from "./Button";
 
 const HeroHome = () => {
