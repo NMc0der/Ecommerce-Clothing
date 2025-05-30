@@ -1,12 +1,12 @@
 import { Link } from "react-router-dom";
-import { FaShoppingCart } from "react-icons/fa";
+// import { FaShoppingCart } from "react-icons/fa";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { IoMdClose } from "react-icons/io";
 
 import { GiShoppingBag } from "react-icons/gi";
 import { useContext, useState, useEffect } from "react";
 import { ShopContext } from "./ShopContext";
-import { ProductList } from "../data/ProductList";
+// import { ProductList } from "../data/ProductList";
 const Navbar = () => {
   const { cartTotal, cartItems, getTotalItemAmount } = useContext(ShopContext);
   // const total = cartItems.map((item) => {
@@ -70,7 +70,7 @@ const Navbar = () => {
       className={
         navColor
           ? "navbar  fixed w-full bg-white ease-in-out duration-200 z-20 "
-          : "navbar  fixed  w-full ease-in-out duration-200 z-20  after:bg-white after:content-center after:ml-[5%]  after:h-[2px] after:w-[90%] after:absolute"
+          : "navbar  fixed  w-full ease-in-out duration-200 z-20 after:bg-white after:content-center after:ml-[5%]  after:h-[2px] after:w-[90%] after:absolute"
       }
     >
       <div className="wrapper  flex justify-between items-center  gap-6 mx-[10%] p-3">

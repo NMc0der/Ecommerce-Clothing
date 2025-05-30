@@ -18,7 +18,7 @@ const CartItem = ({ props }) => {
         <h2 className="pb-5 sm:text-3xl font-bold sm:font-normal">
           {props.name}
         </h2>
-        <p className=" my-1 text-sm tablet:text-base sm:text-lg">Color: hi</p>
+        <p className=" my-1 text-sm tablet:text-base sm:text-lg"></p>
         <p className="my-3 text-sm tablet:text-base sm:text-lg">
           Price: ${props.price.toFixed(2)}
         </p>
