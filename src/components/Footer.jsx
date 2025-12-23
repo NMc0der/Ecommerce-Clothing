@@ -34,7 +34,7 @@ const Footer = () => {
         </Link>
       </div>
       <p className="text-center border-t-black border-t-[1px] mx-[10%] text-xs sm:text-sm">
-        © 2024 Shine, LLC. All Rights Reserved.
+        © 2025 Shine, LLC. All Rights Reserved.
       </p>
     </div>
   );

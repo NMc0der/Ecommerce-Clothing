@@ -9,7 +9,7 @@ const HomeShopNow = () => {
     >
       <div className="text 2xl:ml-[25rem] mb-[20rem]">
         <h2 className="text-red-500 text-center bg-white rounded-md p-2 text-5xl 2xl:text-7xl m-4 font-Garamond">
-          New Summer <br /> 2024 Collection
+          New Summer <br /> 2025 Collection
         </h2>
         <Link
           className="self-center sm:self-end md:self-center lg:self-start m-4"
